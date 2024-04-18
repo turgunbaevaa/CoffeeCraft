@@ -8,7 +8,10 @@
 import UIKit
 import SnapKit
 
-class MenuBarViewCell: UICollectionViewCell {
+class MenuBarCell: UICollectionViewCell {
+    
+    static let reuseId = "coffeeBar_cell"
+    
     private let titleLabel = CoffeeCraftTitleLabel(fontSize: 16)
     
     private lazy var menuLabelView: UIView = {
@@ -41,5 +44,9 @@ class MenuBarViewCell: UICollectionViewCell {
             make.centerY.equalToSuperview()
             make.centerX.equalToSuperview()
         }
+    }
+    
+    func setData(with model: Category) {
+        titleLabel.text = model.strCategory
     }
 }

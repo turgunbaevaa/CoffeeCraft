@@ -27,8 +27,8 @@ class AuthorizationViewController: UIViewController {
     private func setupUI() {
         authorizationView.didLoginBtnTapped = { [weak self] in
             guard let self else { return }
-            //let vc = MenuBarViewController()
-            //self.navigationController?.pushViewController(vc, animated: true)
+            let vc = MenuBarViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

@@ -21,7 +21,14 @@
 		0A87F86C2BD16795007321F1 /* CoffeeCraftTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F86B2BD16795007321F1 /* CoffeeCraftTitleLabel.swift */; };
 		0A87F8702BD167EC007321F1 /* CoffeeCraftImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F86F2BD167EC007321F1 /* CoffeeCraftImageView.swift */; };
 		0A87F8732BD16CBF007321F1 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8722BD16CBF007321F1 /* UIView+Ext.swift */; };
-		0A87F8762BD17092007321F1 /* MenuBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8752BD17092007321F1 /* MenuBarViewCell.swift */; };
+		0A87F8762BD17092007321F1 /* MenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8752BD17092007321F1 /* MenuBarCell.swift */; };
+		0A87F8782BD1B113007321F1 /* MenuBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8772BD1B113007321F1 /* MenuBarViewController.swift */; };
+		0A87F87C2BD1B2E7007321F1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F87B2BD1B2E7007321F1 /* Product.swift */; };
+		0A87F87E2BD1B324007321F1 /* ProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F87D2BD1B324007321F1 /* ProductsCell.swift */; };
+		0A87F8822BD1B3DF007321F1 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8812BD1B3DF007321F1 /* Categories.swift */; };
+		0A87F8842BD1B44A007321F1 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8832BD1B44A007321F1 /* JSONParser.swift */; };
+		0A87F8862BD1B77D007321F1 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8852BD1B77D007321F1 /* ProductsViewController.swift */; };
+		0A87F8882BD1B7CB007321F1 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8872BD1B7CB007321F1 /* CounterModel.swift */; };
 		604B7F64573A040AF4F0E1C5 /* Pods_CoffeeCraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C7503E111213C7DD7A96D0 /* Pods_CoffeeCraft.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +50,16 @@
 		0A87F86B2BD16795007321F1 /* CoffeeCraftTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCraftTitleLabel.swift; sourceTree = "<group>"; };
 		0A87F86F2BD167EC007321F1 /* CoffeeCraftImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCraftImageView.swift; sourceTree = "<group>"; };
 		0A87F8722BD16CBF007321F1 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
-		0A87F8752BD17092007321F1 /* MenuBarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewCell.swift; sourceTree = "<group>"; };
+		0A87F8752BD17092007321F1 /* MenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarCell.swift; sourceTree = "<group>"; };
+		0A87F8772BD1B113007321F1 /* MenuBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewController.swift; sourceTree = "<group>"; };
+		0A87F87B2BD1B2E7007321F1 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0A87F87D2BD1B324007321F1 /* ProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCell.swift; sourceTree = "<group>"; };
+		0A87F87F2BD1B3A5007321F1 /* Products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
+		0A87F8802BD1B3C2007321F1 /* Category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Category.json; sourceTree = "<group>"; };
+		0A87F8812BD1B3DF007321F1 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		0A87F8832BD1B44A007321F1 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		0A87F8852BD1B77D007321F1 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		0A87F8872BD1B7CB007321F1 /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
 		1F7CF2AEDD13CC1D99E40CDB /* Pods-CoffeeCraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCraft.release.xcconfig"; path = "Target Support Files/Pods-CoffeeCraft/Pods-CoffeeCraft.release.xcconfig"; sourceTree = "<group>"; };
 		F394910E12219E611909F675 /* Pods-CoffeeCraft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCraft.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeCraft/Pods-CoffeeCraft.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +97,7 @@
 		0A87F8402BD1629B007321F1 /* CoffeeCraft */ = {
 			isa = PBXGroup;
 			children = (
+				0A87F87A2BD1B2CC007321F1 /* DTO */,
 				0A87F8712BD16CA1007321F1 /* Extensions */,
 				0A87F8572BD162DF007321F1 /* Modules */,
 				0A87F8562BD162CE007321F1 /* Resouces */,
@@ -111,6 +128,7 @@
 		0A87F8572BD162DF007321F1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0A87F8792BD1B29B007321F1 /* Products */,
 				0A87F8742BD1703C007321F1 /* MainMenu */,
 				0A87F85D2BD163D3007321F1 /* Authorization */,
 				0A87F85A2BD163B8007321F1 /* Start */,
@@ -192,9 +210,32 @@
 		0A87F8742BD1703C007321F1 /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
-				0A87F8752BD17092007321F1 /* MenuBarViewCell.swift */,
+				0A87F8752BD17092007321F1 /* MenuBarCell.swift */,
+				0A87F8772BD1B113007321F1 /* MenuBarViewController.swift */,
 			);
 			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		0A87F8792BD1B29B007321F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A87F87D2BD1B324007321F1 /* ProductsCell.swift */,
+				0A87F8852BD1B77D007321F1 /* ProductsViewController.swift */,
+				0A87F8872BD1B7CB007321F1 /* CounterModel.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		0A87F87A2BD1B2CC007321F1 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				0A87F87B2BD1B2E7007321F1 /* Product.swift */,
+				0A87F8812BD1B3DF007321F1 /* Categories.swift */,
+				0A87F87F2BD1B3A5007321F1 /* Products.json */,
+				0A87F8802BD1B3C2007321F1 /* Category.json */,
+				0A87F8832BD1B44A007321F1 /* JSONParser.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		2B26BC06E50B6998A6B5713F /* Frameworks */ = {
@@ -329,7 +370,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A87F8652BD166E7007321F1 /* CoffeeCraftTextField.swift in Sources */,
+				0A87F87E2BD1B324007321F1 /* ProductsCell.swift in Sources */,
+				0A87F8842BD1B44A007321F1 /* JSONParser.swift in Sources */,
+				0A87F8862BD1B77D007321F1 /* ProductsViewController.swift in Sources */,
 				0A87F86A2BD16752007321F1 /* MinusAndPlusButton.swift in Sources */,
+				0A87F87C2BD1B2E7007321F1 /* Product.swift in Sources */,
+				0A87F8822BD1B3DF007321F1 /* Categories.swift in Sources */,
 				0A87F8702BD167EC007321F1 /* CoffeeCraftImageView.swift in Sources */,
 				0A87F86C2BD16795007321F1 /* CoffeeCraftTitleLabel.swift in Sources */,
 				0A87F8612BD163FA007321F1 /* AuthorizationViewController.swift in Sources */,
@@ -337,10 +383,12 @@
 				0A87F8422BD1629B007321F1 /* AppDelegate.swift in Sources */,
 				0A87F8442BD1629B007321F1 /* SceneDelegate.swift in Sources */,
 				0A87F8732BD16CBF007321F1 /* UIView+Ext.swift in Sources */,
+				0A87F8882BD1B7CB007321F1 /* CounterModel.swift in Sources */,
 				0A87F85F2BD163EC007321F1 /* AuthorizationView.swift in Sources */,
 				0A87F8682BD16727007321F1 /* CoffeeCraftButton.swift in Sources */,
 				0A87F85C2BD163CC007321F1 /* StartView.swift in Sources */,
-				0A87F8762BD17092007321F1 /* MenuBarViewCell.swift in Sources */,
+				0A87F8762BD17092007321F1 /* MenuBarCell.swift in Sources */,
+				0A87F8782BD1B113007321F1 /* MenuBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
