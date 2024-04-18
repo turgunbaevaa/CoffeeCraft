@@ -15,9 +15,18 @@
 		0A87F85C2BD163CC007321F1 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F85B2BD163CC007321F1 /* StartView.swift */; };
 		0A87F85F2BD163EC007321F1 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F85E2BD163EC007321F1 /* AuthorizationView.swift */; };
 		0A87F8612BD163FA007321F1 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8602BD163FA007321F1 /* AuthorizationViewController.swift */; };
+		0A87F8652BD166E7007321F1 /* CoffeeCraftTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8642BD166E7007321F1 /* CoffeeCraftTextField.swift */; };
+		0A87F8682BD16727007321F1 /* CoffeeCraftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8672BD16727007321F1 /* CoffeeCraftButton.swift */; };
+		0A87F86A2BD16752007321F1 /* MinusAndPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8692BD16752007321F1 /* MinusAndPlusButton.swift */; };
+		0A87F86C2BD16795007321F1 /* CoffeeCraftTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F86B2BD16795007321F1 /* CoffeeCraftTitleLabel.swift */; };
+		0A87F8702BD167EC007321F1 /* CoffeeCraftImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F86F2BD167EC007321F1 /* CoffeeCraftImageView.swift */; };
+		0A87F8732BD16CBF007321F1 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8722BD16CBF007321F1 /* UIView+Ext.swift */; };
+		0A87F8762BD17092007321F1 /* MenuBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8752BD17092007321F1 /* MenuBarViewCell.swift */; };
+		604B7F64573A040AF4F0E1C5 /* Pods_CoffeeCraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C7503E111213C7DD7A96D0 /* Pods_CoffeeCraft.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05C7503E111213C7DD7A96D0 /* Pods_CoffeeCraft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeCraft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A87F83E2BD1629B007321F1 /* CoffeeCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A87F8412BD1629B007321F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A87F8432BD1629B007321F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +37,15 @@
 		0A87F85B2BD163CC007321F1 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		0A87F85E2BD163EC007321F1 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		0A87F8602BD163FA007321F1 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		0A87F8642BD166E7007321F1 /* CoffeeCraftTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCraftTextField.swift; sourceTree = "<group>"; };
+		0A87F8672BD16727007321F1 /* CoffeeCraftButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCraftButton.swift; sourceTree = "<group>"; };
+		0A87F8692BD16752007321F1 /* MinusAndPlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinusAndPlusButton.swift; sourceTree = "<group>"; };
+		0A87F86B2BD16795007321F1 /* CoffeeCraftTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCraftTitleLabel.swift; sourceTree = "<group>"; };
+		0A87F86F2BD167EC007321F1 /* CoffeeCraftImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCraftImageView.swift; sourceTree = "<group>"; };
+		0A87F8722BD16CBF007321F1 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		0A87F8752BD17092007321F1 /* MenuBarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewCell.swift; sourceTree = "<group>"; };
+		1F7CF2AEDD13CC1D99E40CDB /* Pods-CoffeeCraft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCraft.release.xcconfig"; path = "Target Support Files/Pods-CoffeeCraft/Pods-CoffeeCraft.release.xcconfig"; sourceTree = "<group>"; };
+		F394910E12219E611909F675 /* Pods-CoffeeCraft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCraft.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeCraft/Pods-CoffeeCraft.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604B7F64573A040AF4F0E1C5 /* Pods_CoffeeCraft.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +65,8 @@
 			children = (
 				0A87F8402BD1629B007321F1 /* CoffeeCraft */,
 				0A87F83F2BD1629B007321F1 /* Products */,
+				ACB6801CAAE8F35C78AA48FD /* Pods */,
+				2B26BC06E50B6998A6B5713F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +81,7 @@
 		0A87F8402BD1629B007321F1 /* CoffeeCraft */ = {
 			isa = PBXGroup;
 			children = (
+				0A87F8712BD16CA1007321F1 /* Extensions */,
 				0A87F8572BD162DF007321F1 /* Modules */,
 				0A87F8562BD162CE007321F1 /* Resouces */,
 				0A87F8552BD162C0007321F1 /* Delegates */,
@@ -89,9 +111,10 @@
 		0A87F8572BD162DF007321F1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0A87F8622BD16433007321F1 /* CustomViews */,
+				0A87F8742BD1703C007321F1 /* MainMenu */,
 				0A87F85D2BD163D3007321F1 /* Authorization */,
 				0A87F85A2BD163B8007321F1 /* Start */,
+				0A87F8622BD16433007321F1 /* CustomViews */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -117,8 +140,78 @@
 		0A87F8622BD16433007321F1 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				0A87F86E2BD167CD007321F1 /* ImageViews */,
+				0A87F86D2BD1679C007321F1 /* Labels */,
+				0A87F8662BD16711007321F1 /* Buttons */,
+				0A87F8632BD166C0007321F1 /* TextFields */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		0A87F8632BD166C0007321F1 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				0A87F8642BD166E7007321F1 /* CoffeeCraftTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		0A87F8662BD16711007321F1 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0A87F8672BD16727007321F1 /* CoffeeCraftButton.swift */,
+				0A87F8692BD16752007321F1 /* MinusAndPlusButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		0A87F86D2BD1679C007321F1 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				0A87F86B2BD16795007321F1 /* CoffeeCraftTitleLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		0A87F86E2BD167CD007321F1 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				0A87F86F2BD167EC007321F1 /* CoffeeCraftImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		0A87F8712BD16CA1007321F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A87F8722BD16CBF007321F1 /* UIView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0A87F8742BD1703C007321F1 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				0A87F8752BD17092007321F1 /* MenuBarViewCell.swift */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		2B26BC06E50B6998A6B5713F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05C7503E111213C7DD7A96D0 /* Pods_CoffeeCraft.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACB6801CAAE8F35C78AA48FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F394910E12219E611909F675 /* Pods-CoffeeCraft.debug.xcconfig */,
+				1F7CF2AEDD13CC1D99E40CDB /* Pods-CoffeeCraft.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A87F8522BD1629D007321F1 /* Build configuration list for PBXNativeTarget "CoffeeCraft" */;
 			buildPhases = (
+				955B6D017A55D1B90F912B39 /* [CP] Check Pods Manifest.lock */,
 				0A87F83A2BD1629B007321F1 /* Sources */,
 				0A87F83B2BD1629B007321F1 /* Frameworks */,
 				0A87F83C2BD1629B007321F1 /* Resources */,
+				CAA1DD4CFC6EC9E622789125 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,17 +281,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		955B6D017A55D1B90F912B39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoffeeCraft-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAA1DD4CFC6EC9E622789125 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoffeeCraft/Pods-CoffeeCraft-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoffeeCraft/Pods-CoffeeCraft-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoffeeCraft/Pods-CoffeeCraft-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0A87F83A2BD1629B007321F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A87F8652BD166E7007321F1 /* CoffeeCraftTextField.swift in Sources */,
+				0A87F86A2BD16752007321F1 /* MinusAndPlusButton.swift in Sources */,
+				0A87F8702BD167EC007321F1 /* CoffeeCraftImageView.swift in Sources */,
+				0A87F86C2BD16795007321F1 /* CoffeeCraftTitleLabel.swift in Sources */,
 				0A87F8612BD163FA007321F1 /* AuthorizationViewController.swift in Sources */,
 				0A87F8592BD163A5007321F1 /* StartViewController.swift in Sources */,
 				0A87F8422BD1629B007321F1 /* AppDelegate.swift in Sources */,
 				0A87F8442BD1629B007321F1 /* SceneDelegate.swift in Sources */,
+				0A87F8732BD16CBF007321F1 /* UIView+Ext.swift in Sources */,
 				0A87F85F2BD163EC007321F1 /* AuthorizationView.swift in Sources */,
+				0A87F8682BD16727007321F1 /* CoffeeCraftButton.swift in Sources */,
 				0A87F85C2BD163CC007321F1 /* StartView.swift in Sources */,
+				0A87F8762BD17092007321F1 /* MenuBarViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +395,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -314,7 +458,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -335,6 +479,7 @@
 		};
 		0A87F8532BD1629D007321F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F394910E12219E611909F675 /* Pods-CoffeeCraft.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +507,7 @@
 		};
 		0A87F8542BD1629D007321F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F7CF2AEDD13CC1D99E40CDB /* Pods-CoffeeCraft.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

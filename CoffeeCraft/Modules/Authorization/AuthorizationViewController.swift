@@ -8,22 +8,27 @@
 import UIKit
 
 class AuthorizationViewController: UIViewController {
-
+    
+    private let authorizationView = AuthorizationView(frame: .zero)
+    
+    deinit {
+        print("vc is deinited")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func loadView() {
+        super.loadView()
+        view = authorizationView
     }
-    */
-
+    
+    private func setupUI() {
+        authorizationView.didLoginBtnTapped = { [weak self] in
+            guard let self else { return }
+            //let vc = MenuBarViewController()
+            //self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
