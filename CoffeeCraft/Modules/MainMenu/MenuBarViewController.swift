@@ -75,13 +75,14 @@ class MenuBarViewController: UIViewController {
         menuCollectionView.snp.makeConstraints { make in
             make.top.equalTo(searchBar.snp.bottom).offset(16)
             make.height.equalTo(32)
-            make.width.equalToSuperview()
+            make.horizontalEdges.equalToSuperview().inset(16)
         }
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(menuCollectionView.snp.bottom).offset(24)
-            make.bottom.equalTo(view.safeAreaLayoutGuide)
             make.horizontalEdges.equalToSuperview().inset(16)
+            make.height.equalTo(24)
+            make.bottom.equalTo(productsCollectionView.snp.top).offset(-16)
         }
         
         productsCollectionView.snp.makeConstraints { make in
@@ -151,11 +152,13 @@ extension MenuBarViewController: UICollectionViewDataSource {
             let model = categories[indexPath.row]
             cell.setData(with: model)
             cell.backgroundColor = indexPath.item == selectedCategoryIndex ? .red : .clear
+            //menuCollectionView.reloadData()
             return cell
         } else if collectionView == productsCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductsCell.reuseId, for: indexPath) as! ProductsCell
             let model = products[indexPath.row]
             cell.setData(with: model)
+            //productsCollectionView.reloadData()
             return cell
         } else {
             return UICollectionViewCell()
@@ -169,7 +172,6 @@ extension MenuBarViewController: UICollectionViewDelegate {
         guard collectionView == menuCollectionView else { return }
         selectedCategoryIndex = indexPath.item
         menuCollectionView.reloadData()
-        
         let category = categories[indexPath.item]
         selectedCategory = category
         guard collectionView == productsCollectionView else { return }

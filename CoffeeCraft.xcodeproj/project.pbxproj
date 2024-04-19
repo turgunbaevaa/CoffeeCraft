@@ -210,8 +210,10 @@
 		0A87F8742BD1703C007321F1 /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
+				0A87F87D2BD1B324007321F1 /* ProductsCell.swift */,
 				0A87F8752BD17092007321F1 /* MenuBarCell.swift */,
 				0A87F8772BD1B113007321F1 /* MenuBarViewController.swift */,
+				0A87F8872BD1B7CB007321F1 /* CounterModel.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -219,9 +221,7 @@
 		0A87F8792BD1B29B007321F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A87F87D2BD1B324007321F1 /* ProductsCell.swift */,
 				0A87F8852BD1B77D007321F1 /* ProductsViewController.swift */,
-				0A87F8872BD1B7CB007321F1 /* CounterModel.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";

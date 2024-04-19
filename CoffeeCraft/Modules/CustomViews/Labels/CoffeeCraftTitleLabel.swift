@@ -20,7 +20,7 @@ class CoffeeCraftTitleLabel: UILabel {
     
     convenience init(fontSize: CGFloat) {
         self.init(frame: .zero)
-        font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
+        font = UIFont.systemFont(ofSize: fontSize, weight: .regular)
     }
     
     private func configure(){
