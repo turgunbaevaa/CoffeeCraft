@@ -17,7 +17,7 @@ class ProductsCell: UICollectionViewCell {
     
     static let reuseId = "coffee_cell"
     
-    private let cellImageView = CoffeeCraftImageView(image: UIImage(named: "")!)
+    private let cellImageView = CoffeeCraftImageView(image: UIImage(named: "logo")!)
     private let titleLabel = CoffeeCraftTitleLabel(fontSize: 16)
     private let descriptionLabel = CoffeeCraftTitleLabel(fontSize: 12)
     private let priceLabel = CoffeeCraftTitleLabel(fontSize: 12)
@@ -84,7 +84,7 @@ class ProductsCell: UICollectionViewCell {
         plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
     }
     
-    func setData(with model: Product) {
+    func setData(with model: ProductModel) {
         cellImageView.image = UIImage(named: model.productIcon)
         titleLabel.text = model.productName
         descriptionLabel.text = model.productDescription

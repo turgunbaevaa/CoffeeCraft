@@ -1,19 +1,17 @@
-{
-    "categories": [
-        {
-            "strCategory": "Coffee"
-        },
-        
-        {
-            "strCategory": "Bakery"
-        },
-        
-        {
-            "strCategory": "Desserts"
-        },
-        
-        {
-            "strCategory": "Cocktails"
-        }
-    ]
-}
+[
+    {
+        "strCategory": "Coffee"
+    },
+    
+    {
+        "strCategory": "Bakery"
+    },
+    
+    {
+        "strCategory": "Desserts"
+    },
+    
+    {
+        "strCategory": "Cocktails"
+    }
+]

@@ -23,12 +23,14 @@
 		0A87F8732BD16CBF007321F1 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8722BD16CBF007321F1 /* UIView+Ext.swift */; };
 		0A87F8762BD17092007321F1 /* MenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8752BD17092007321F1 /* MenuBarCell.swift */; };
 		0A87F8782BD1B113007321F1 /* MenuBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8772BD1B113007321F1 /* MenuBarViewController.swift */; };
-		0A87F87C2BD1B2E7007321F1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F87B2BD1B2E7007321F1 /* Product.swift */; };
+		0A87F87C2BD1B2E7007321F1 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F87B2BD1B2E7007321F1 /* ProductModel.swift */; };
 		0A87F87E2BD1B324007321F1 /* ProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F87D2BD1B324007321F1 /* ProductsCell.swift */; };
 		0A87F8822BD1B3DF007321F1 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8812BD1B3DF007321F1 /* Categories.swift */; };
 		0A87F8842BD1B44A007321F1 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8832BD1B44A007321F1 /* JSONParser.swift */; };
 		0A87F8862BD1B77D007321F1 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8852BD1B77D007321F1 /* ProductsViewController.swift */; };
 		0A87F8882BD1B7CB007321F1 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87F8872BD1B7CB007321F1 /* CounterModel.swift */; };
+		0A87F8892BD425C9007321F1 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A87F87F2BD1B3A5007321F1 /* Products.json */; };
+		0A87F88A2BD425CF007321F1 /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A87F8802BD1B3C2007321F1 /* Category.json */; };
 		604B7F64573A040AF4F0E1C5 /* Pods_CoffeeCraft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C7503E111213C7DD7A96D0 /* Pods_CoffeeCraft.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +54,7 @@
 		0A87F8722BD16CBF007321F1 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		0A87F8752BD17092007321F1 /* MenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarCell.swift; sourceTree = "<group>"; };
 		0A87F8772BD1B113007321F1 /* MenuBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewController.swift; sourceTree = "<group>"; };
-		0A87F87B2BD1B2E7007321F1 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0A87F87B2BD1B2E7007321F1 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		0A87F87D2BD1B324007321F1 /* ProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCell.swift; sourceTree = "<group>"; };
 		0A87F87F2BD1B3A5007321F1 /* Products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
 		0A87F8802BD1B3C2007321F1 /* Category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Category.json; sourceTree = "<group>"; };
@@ -229,7 +231,7 @@
 		0A87F87A2BD1B2CC007321F1 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				0A87F87B2BD1B2E7007321F1 /* Product.swift */,
+				0A87F87B2BD1B2E7007321F1 /* ProductModel.swift */,
 				0A87F8812BD1B3DF007321F1 /* Categories.swift */,
 				0A87F87F2BD1B3A5007321F1 /* Products.json */,
 				0A87F8802BD1B3C2007321F1 /* Category.json */,
@@ -315,6 +317,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A87F88A2BD425CF007321F1 /* Category.json in Resources */,
+				0A87F8892BD425C9007321F1 /* Products.json in Resources */,
 				0A87F84B2BD1629D007321F1 /* Assets.xcassets in Resources */,
 				0A87F84E2BD1629D007321F1 /* Base in Resources */,
 			);
@@ -374,7 +378,7 @@
 				0A87F8842BD1B44A007321F1 /* JSONParser.swift in Sources */,
 				0A87F8862BD1B77D007321F1 /* ProductsViewController.swift in Sources */,
 				0A87F86A2BD16752007321F1 /* MinusAndPlusButton.swift in Sources */,
-				0A87F87C2BD1B2E7007321F1 /* Product.swift in Sources */,
+				0A87F87C2BD1B2E7007321F1 /* ProductModel.swift in Sources */,
 				0A87F8822BD1B3DF007321F1 /* Categories.swift in Sources */,
 				0A87F8702BD167EC007321F1 /* CoffeeCraftImageView.swift in Sources */,
 				0A87F86C2BD16795007321F1 /* CoffeeCraftTitleLabel.swift in Sources */,

@@ -1,73 +1,71 @@
-{
-    "meals": [
-        {
-            "productName": "Cappuccino",
-            "productDescription": "Coffee drink",
-            "productPrice": 250,
-            "productIcon": "url"
-        },
-        
-        {
-            "productName": "Latte",
-            "productDescription": "Coffee drink",
-            "productPrice": 240,
-            "productIcon": "url"
-        },
-        
-        {
-            "productName": "Americano",
-            "productDescription": "Coffee drink",
-            "productPrice": 230,
-            "productIcon": "url"
-        },
-        
-        {
-            "productName": "Raf",
-            "productDescription": "Coffee drink",
-            "productPrice": 250,
-            "productIcon": "url"
-        },
-        
-        {
-            "productName": "Espresso",
-            "productDescription": "Coffee drink",
-            "productPrice": 270,
-            "productIcon": "url"
-        },
-        
-        {
-            "productName": "Mocco",
-            "productDescription": "Coffee drink",
-            "productPrice": 200,
-            "productIcon": "url"
-        },
-        
-        {
-            "productName": "Cheesecake",
-            "productDescription": "Sweet addition",
-            "productPrice": 140,
-            "productIcon": "url"
-        },
-        
-        {
-            "productName": "Black tea",
-            "productDescription": "Tastes like grandma's house",
-            "productPrice": 140,
-            "productIcon": "url"
-        },
-        
-        {
-            "productName": "Strawberry Mojito",
-            "productDescription": "Non-alcoholic",
-            "productPrice": 250,
-            "productIcon": "url"
-        },
-        
-        {
-            "productName": "Braune",
-            "productDescription": "Chocolate taste",
-            "productPrice": 190,
-            "productIcon": "url"
-        }
-    ]
-}
+[
+    {
+        "productName": "Cappuccino",
+        "productDescription": "Coffee drink",
+        "productPrice": 250,
+        "productIcon": "cappuccino.png"
+    },
+    
+    {
+        "productName": "Latte",
+        "productDescription": "Coffee drink",
+        "productPrice": 240,
+        "productIcon": "latte.png"
+    },
+    
+    {
+        "productName": "Americano",
+        "productDescription": "Coffee drink",
+        "productPrice": 230,
+        "productIcon": "americano.png"
+    },
+    
+    {
+        "productName": "Raf",
+        "productDescription": "Coffee drink",
+        "productPrice": 250,
+        "productIcon": "raf.png"
+    },
+    
+    {
+        "productName": "Espresso",
+        "productDescription": "Coffee drink",
+        "productPrice": 270,
+        "productIcon": "espresso.png"
+    },
+    
+    {
+        "productName": "Mocco",
+        "productDescription": "Coffee drink",
+        "productPrice": 200,
+        "productIcon": "mocco.png"
+    },
+    
+    {
+        "productName": "Cheesecake",
+        "productDescription": "Sweet addition",
+        "productPrice": 140,
+        "productIcon": "cheesecake.png"
+    },
+    
+    {
+        "productName": "Black tea",
+        "productDescription": "Tastes like grandma's house",
+        "productPrice": 140,
+        "productIcon": "blacktea.png"
+    },
+    
+    {
+        "productName": "Strawberry Mojito",
+        "productDescription": "Non-alcoholic",
+        "productPrice": 250,
+        "productIcon": "mokhito.png"
+    },
+    
+    {
+        "productName": "Braune",
+        "productDescription": "Chocolate taste",
+        "productPrice": 190,
+        "productIcon": "braune.png"
+    }
+]

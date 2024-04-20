@@ -46,7 +46,7 @@ class MenuBarCell: UICollectionViewCell {
         }
     }
     
-    func setData(with model: Category) {
+    func setMenuBarData(with model: Category) {
         titleLabel.text = model.strCategory
     }
 }
