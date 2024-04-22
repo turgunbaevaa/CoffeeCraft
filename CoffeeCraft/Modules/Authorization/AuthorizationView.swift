@@ -11,7 +11,7 @@ import SnapKit
 class AuthorizationView: UIView {
     
     let logoImageView = CoffeeCraftImageView(image: UIImage(named: "logo")!)
-    let logInTitle = CoffeeCraftTitleLabel(fontSize: 34)
+    let logInTitle = CoffeeCraftTitleLabel(fontSize: 34, weight: .regular)
     let logInTextField = CoffeeCraftTextField(placeholder: "555 555 555 555")
     let logInButton = CoffeeCraftButton(backgroundColor: .orange, titleColor: .white, title: "Log in")
     

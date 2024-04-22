@@ -12,7 +12,7 @@ class MenuBarCell: UICollectionViewCell {
     
     static let reuseId = "coffeeBar_cell"
     
-    private let titleLabel = CoffeeCraftTitleLabel(fontSize: 16)
+    private let titleLabel = CoffeeCraftTitleLabel(fontSize: 16, weight: .regular)
     
     private lazy var menuLabelView: UIView = {
         let view = UIView()

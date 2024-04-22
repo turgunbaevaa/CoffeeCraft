@@ -28,7 +28,7 @@ class MenuBarViewController: UIViewController {
         return view
     }()
     
-    private let titleLabel = CoffeeCraftTitleLabel(fontSize: 24)
+    private let titleLabel = CoffeeCraftTitleLabel(fontSize: 24, weight: .regular)
     
     private lazy var productsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -42,11 +42,17 @@ class MenuBarViewController: UIViewController {
     }()
     
     private var categories: [Category] = []
-    private var products: [ProductModel] = []
+    private var products: [Product] = []
     private var counter = CounterModel(counter: 0)
     private var selectedCategoryIndex: Int = 0
-    private var selectedCategory: Category?
-    private let parser = JSONParser()
+    private let networkManager = NetworkManager.shared
+    private var updatedProducts: [Product] = []
+    
+    private var selectedCategory: Category? {
+        didSet {
+            fetchProducts(by: selectedCategory!)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +63,8 @@ class MenuBarViewController: UIViewController {
         view.backgroundColor = .systemBackground
         setupConstraints()
         setupNavigationItem()
-        loadJSONData()
+        fetchCategories()
+        updatedProducts = products
     }
     
     private func setupNavigationItem() {
@@ -94,72 +101,51 @@ class MenuBarViewController: UIViewController {
         }
     }
     
-    private func getImageURL(forFilename filename: String) -> URL? {
-        if let imageURL = Bundle.main.url(forResource: "Images/\(filename)", withExtension: nil) {
-            return imageURL
-        }
-        return nil
-    }
-    
-    private func decodeJSONData(categoriesData: Data, productsData: Data) {
-        let decoder = JSONDecoder()
-        do {
-            let categories = try decoder.decode([Category].self, from: categoriesData)
-            self.categories = categories
-            DispatchQueue.main.async {
-                self.menuCollectionView.reloadData()
-            }
-        } catch {
-            print("Failed to decode categories data:", error)
-        }
-        
-        do {
-            let products = try decoder.decode([ProductModel].self, from: productsData)
-            self.products = products
-            DispatchQueue.main.async {
-                self.productsCollectionView.reloadData()
-            }
-            
-            for product in products {
-                if let imageURL = URL(string: product.productIcon) {
-                    print("URL изображения для продукта \(product.productName): \(imageURL)")
-                } else {
-                    print("Изображение для продукта \(product.productName) не найдено.")
-                }
+    private func fetchCategories() {
+        Task {
+            do {
+                let categories = try await networkManager.fetchCategories()
+                if let firstCategory = categories.first {
+                    self.categories = categories
+                    self.selectedCategory = firstCategory
+                    DispatchQueue.main.async {
+                        print("Categories loaded:", categories)
+                        self.menuCollectionView.reloadData()
                     }
-        } catch {
-            print("Failed to decode products data:", error)
+                } else {
+                    print("No categories found.")
+                }
+            } catch {
+                print("Error loading categories:", error.localizedDescription)
+            }
         }
     }
-
     
-    private func loadJSONData() {
-        guard let categoriesURL = Bundle.main.url(forResource: "Category", withExtension: "json"),
-              let productsURL = Bundle.main.url(forResource: "Products", withExtension: "json") else {
-            print("JSON files not found.")
-            return
-        }
-        
-        do {
-            let categoriesData = try Data(contentsOf: categoriesURL)
-            let productsData = try Data(contentsOf: productsURL)
-            
-            decodeJSONData(categoriesData: categoriesData, productsData: productsData)
-        } catch {
-            print("Failed to load JSON data:", error)
+    private func fetchProducts(by category: Category) {
+        Task {
+            do {
+                let productResponse = try await self.networkManager.fetchProducts(by: category.strCategory)
+                self.products = productResponse
+                DispatchQueue.main.async {
+                    print("Products loaded:", self.products)
+                    self.productsCollectionView.reloadData()
+                }
+            } catch {
+                print("Error fetching products:", error.localizedDescription)
+            }
         }
     }
 }
+
 extension MenuBarViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if collectionView == menuCollectionView {
-//            return categories.count
-//        } else if collectionView == productsCollectionView {
-//            return products.count
-//        }
-//        return 0
-        return products.count
+        if collectionView == menuCollectionView {
+            return categories.count
+        } else if collectionView == productsCollectionView {
+            return products.count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -167,8 +153,7 @@ extension MenuBarViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuBarCell.reuseId, for: indexPath) as! MenuBarCell
             let model = categories[indexPath.row]
             cell.setMenuBarData(with: model)
-            cell.backgroundColor = indexPath.item == selectedCategoryIndex ? .blue : .clear
-            //cell.tintColor = indexPath.item == selectedCategoryIndex ? .white : .black
+            cell.backgroundColor = indexPath.item == selectedCategoryIndex ? .orange : .clear
             return cell
         } else if collectionView == productsCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductsCell.reuseId, for: indexPath) as! ProductsCell
@@ -183,25 +168,30 @@ extension MenuBarViewController: UICollectionViewDataSource {
 
 extension MenuBarViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //        guard collectionView == menuCollectionView else { return }
-        //        selectedCategoryIndex = indexPath.item
-        //        menuCollectionView.reloadData()
-        //        let category = categories[indexPath.item]
-        //        selectedCategory = category
-        //        guard collectionView == productsCollectionView else { return }
-        //        if indexPath.item <= products.count {
-        //        }
-        guard collectionView == menuCollectionView else { return }
-        selectedCategoryIndex = indexPath.item
-        menuCollectionView.reloadData()
-        let category = categories[indexPath.item]
-        selectedCategory = category
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath) {
+            if collectionView == menuCollectionView {
+                titleLabel.text = categories[indexPath.row].strCategory
+                selectedCategoryIndex = indexPath.item
+                menuCollectionView.reloadData()
+                let category = categories[indexPath.item]
+                selectedCategory = category
+            }
+            if collectionView == productsCollectionView {
+                if indexPath.row < products.count {
+                    let selectedProduct = products[indexPath.row]
+                    let vc = ProductsViewController()
+                    vc.idMeal = selectedProduct.idMeal
+                    navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+        }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         
-        guard collectionView == productsCollectionView else { return }
     }
 }
-
 extension MenuBarViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -9,6 +9,9 @@ import UIKit
 
 class CoffeeCraftImageView: UIImageView {
     
+    let cache = NetworkManager.shared.cache
+    let placeholderImage = UIImage()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -26,5 +29,15 @@ class CoffeeCraftImageView: UIImageView {
     private func configure(){
         layer.cornerRadius = 10
         clipsToBounds = true
+    }
+    
+    func downloadImage(fromURL url: String) {
+        Task { 
+            do {
+                image = try await NetworkManager.shared.downloadImage(with: url)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }

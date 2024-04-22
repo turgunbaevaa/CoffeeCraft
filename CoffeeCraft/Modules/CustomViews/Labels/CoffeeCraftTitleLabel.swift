@@ -18,9 +18,9 @@ class CoffeeCraftTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(fontSize: CGFloat) {
+    convenience init(fontSize: CGFloat, weight: UIFont.Weight) {
         self.init(frame: .zero)
-        font = UIFont.systemFont(ofSize: fontSize, weight: .regular)
+        font = UIFont.systemFont(ofSize: fontSize, weight: weight)
     }
     
     private func configure(){

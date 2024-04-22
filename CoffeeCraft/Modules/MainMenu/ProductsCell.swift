@@ -17,10 +17,10 @@ class ProductsCell: UICollectionViewCell {
     
     static let reuseId = "coffee_cell"
     
-    private let cellImageView = CoffeeCraftImageView(image: UIImage(named: "logo")!)
-    private let titleLabel = CoffeeCraftTitleLabel(fontSize: 16)
-    private let descriptionLabel = CoffeeCraftTitleLabel(fontSize: 12)
-    private let priceLabel = CoffeeCraftTitleLabel(fontSize: 12)
+    private let cellImageView = CoffeeCraftImageView(image: UIImage(named: "picture")!)
+    private let titleLabel = CoffeeCraftTitleLabel(fontSize: 16, weight: .regular)
+    private let descriptionLabel = CoffeeCraftTitleLabel(fontSize: 12, weight: .regular)
+    private let priceLabel = CoffeeCraftTitleLabel(fontSize: 12, weight: .regular)
     
     private lazy var verticalStackView: UIStackView = {
         let view = UIStackView()
@@ -30,7 +30,7 @@ class ProductsCell: UICollectionViewCell {
     }()
     
     private let minusButton = MinusAndPlusButton(backgroundColor: .systemGray6, tintColor: .black, image: "minus")
-    private let countLabel = CoffeeCraftTitleLabel(fontSize: 14)
+    private let countLabel = CoffeeCraftTitleLabel(fontSize: 14, weight: .regular)
     private let plusButton = MinusAndPlusButton(backgroundColor: .orange, tintColor: .white, image: "plus")
     
     private lazy var countStackView: UIStackView = {
@@ -84,12 +84,20 @@ class ProductsCell: UICollectionViewCell {
         plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
     }
     
-    func setData(with model: ProductModel) {
-        cellImageView.image = UIImage(named: model.productIcon)
-        titleLabel.text = model.productName
-        descriptionLabel.text = model.productDescription
-        priceLabel.text = String(model.productPrice)
+    func setData(with model: Product) {
+        titleLabel.text = model.strMeal
+        priceLabel.text = String(model.idMeal)
         
+        Task {
+            do {
+                let image = try await NetworkManager.shared.downloadImage(with: model.strMealThumb)
+                DispatchQueue.main.async {
+                    self.cellImageView.image = image
+                }
+            } catch {
+                print("Error downloading image:", error.localizedDescription)
+            }
+        }
     }
     
     var counter: Int = 0 {
@@ -103,6 +111,6 @@ class ProductsCell: UICollectionViewCell {
     }
     
     @objc private func minusButtonTapped() {
-        counter -= 1
+        counter = max(0, counter - 1)
     }
 }
